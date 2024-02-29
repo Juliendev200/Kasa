@@ -1,0 +1,38 @@
+#header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3em 3em;
+  max-height: 110px;
+}
+#header ul {
+  display: flex;
+  gap: 4em;
+}
+#header ul li {
+  list-style-type: none;
+}
+#header ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+}
+#header ul li .nav-active {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #header {
+    max-height: 47px;
+    padding: 1.3em 1.3em 0 1.3em;
+  }
+  #header img {
+    max-width: 145px;
+    max-height: 46.88px;
+  }
+  #header ul {
+    gap: 2em;
+  }
+  #header ul li a {
+    font-size: 0.8em;
+  }
+}

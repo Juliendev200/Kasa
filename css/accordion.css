@@ -1,0 +1,49 @@
+.accordion {
+  position: relative;
+  max-width: 1023px;
+}
+.accordion .label {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #FF6060;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  border-radius: 5px;
+  height: 52px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+.accordion .label__arrow {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  color: #FFFFFF;
+  transform: rotate(180deg);
+  transition: all 0.2s;
+}
+.accordion .label__arrow:hover {
+  cursor: pointer;
+}
+.accordion .content {
+  position: relative;
+  background-color: #f6f6f6;
+  font-size: 1.1em;
+  height: 0;
+  overflow: hidden;
+}
+
+.active .content {
+  height: auto;
+  padding: 25px 20px;
+  overflow-y: auto;
+}
+.active .content p {
+  padding: 5px;
+  margin: 0;
+}
+.active .label__arrow {
+  transform: rotate(0deg);
+  transition: all 0.2s;
+}
