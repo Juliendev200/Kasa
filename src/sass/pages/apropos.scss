@@ -1,0 +1,26 @@
+.apropos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    padding-top: 38px;
+}
+
+@media (max-width:768px) {
+    .apropos {
+        gap: 1.3em;
+        padding-top: 0;
+
+        .accordion {
+            width: 100%;
+
+            .label {
+                height: 30px;
+                font-size: 0.85em;
+            }
+
+            .content {
+                font-size: 0.8em;
+            }
+        }
+    }
+}

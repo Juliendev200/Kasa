@@ -1,0 +1,31 @@
+@use "../utils/colors.scss";
+
+.error-page {
+    display: flex;
+    padding: 139px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 139px;
+    margin: 0;
+
+    h1 {
+        font-size: 20em;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+        color: colors.$primary
+    }
+
+    h3 {
+        font-size: 2em;
+        font-weight: 300;
+        color: colors.$primary
+    }
+
+    .comebackhome {
+        font-size: 1.1em;
+        text-decoration: underline;
+        color: colors.$black
+    }
+}

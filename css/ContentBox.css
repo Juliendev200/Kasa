@@ -1,0 +1,40 @@
+.contentBx {
+  position: relative;
+  margin-top: 20px;
+}
+.contentBx .label {
+  position: relative;
+  background: #FF6060;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  border-radius: 5px;
+  font-size: 1.1em;
+  padding: 15px 10px;
+  font-weight: bold;
+}
+.contentBx .label__arrow {
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  color: #FFFFFF;
+}
+.contentBx .label__arrow:hover {
+  cursor: pointer;
+}
+.contentBx .content {
+  position: relative;
+  background-color: #f6f6f6;
+  font-size: 1.1em;
+  height: 0;
+  overflow: hidden;
+}
+
+.active .content {
+  height: auto;
+  padding: 10px;
+  overflow-y: auto;
+}
+.active .label__arrow {
+  transform: rotate(180deg);
+  transition: all 0.2s;
+}

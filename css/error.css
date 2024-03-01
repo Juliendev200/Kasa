@@ -1,0 +1,26 @@
+.error-page {
+  display: flex;
+  padding: 139px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 139px;
+  margin: 0;
+}
+.error-page h1 {
+  font-size: 20em;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  color: #FF6060;
+}
+.error-page h3 {
+  font-size: 2em;
+  font-weight: 300;
+  color: #FF6060;
+}
+.error-page .comebackhome {
+  font-size: 1.1em;
+  text-decoration: underline;
+  color: #000000;
+}
