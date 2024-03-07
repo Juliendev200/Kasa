@@ -4,7 +4,6 @@ import {
   createBrowserRouter, RouterProvider
 } from "react-router-dom";
 import Home from "./routes/Home";
-import RootLayout from "./routes/RootLayout";
 import ErrorPage from "./error-page";
 import Apropos from "./routes/Apropos";
 import Logement from "./routes/Logement"
