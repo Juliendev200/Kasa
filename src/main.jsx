@@ -10,32 +10,28 @@ import Apropos from "./routes/Apropos";
 import Logement from "./routes/Logement"
 import "../css/style.css"
 
+// Change the original path to home path //
 const App = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
+    element: <Home />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: "/Apropos",
+    element: <Apropos />,
+  },
+  {
+    path: "/logement",
     children: [
       {
-        path: "/Home",
-        element: <Home />,
-      },
-      {
-        path: "/Apropos",
-        element: <Apropos />,
-      },
-      {
-        path: "/logement",
-        children: [
-          {
-            path: '/logement/:id',
-            element: <Logement />,
-          },
-        ],
+        path: '/logement/:id',
+        element: <Logement />,
       },
     ],
   },
-]);
+],
+);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

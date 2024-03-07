@@ -8,6 +8,8 @@ import Host from "../components/Host"
 import Rate from "../components/Rate"
 import Tags from "../components/Tags"
 import Logementerror from "./Logementerror";
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default function Fichelogement() {
     const { id } = useParams()
@@ -15,27 +17,32 @@ export default function Fichelogement() {
         data.id === `${id}`
     )
 
-    if (mylocation.length !== 0) return (console.log(mylocation),
+    if (mylocation.length !== 0) return (
         <>
-            {
-                mylocation.map((location, index) =>
-                    <div className="logement" key={index} >
-                        <Carrousel location={location} />
-                        <div className="descriptionwrapper">
-                            <div className="description1">
-                                <Title localisation={location.location} title={location.title} />
-                                <Tags taged={location.tags} />
-                            </div>
-                            <div className="description2">
-                                <Host hostname={location.host.name} hostpicture={location.host.picture} />
-                                <Rate starnumber={location.rating} />
-                            </div>
+            <Navigation />
+            <div className="main-container">
 
+                {
+                    mylocation.map((location, index) =>
+                        <div className="logement" key={index} >
+                            <Carrousel location={location} />
+                            <div className="descriptionwrapper">
+                                <div className="description1">
+                                    <Title localisation={location.location} title={location.title} />
+                                    <Tags taged={location.tags} />
+                                </div>
+                                <div className="description2">
+                                    <Host hostname={location.host.name} hostpicture={location.host.picture} />
+                                    <Rate starnumber={location.rating} />
+                                </div>
+
+                            </div>
+                            <LogementAccordion location={location} />
                         </div>
-                        <LogementAccordion location={location} />
-                    </div>
-                )
-            }
+                    )
+                }
+            </div>
+            <Footer />
         </>)
     else return (<Logementerror />
     )

@@ -14,10 +14,11 @@ export const Carrousel = ({ location }) => {
     const nextSlide = () => {
         setSlide(slide === album.length - 1 ? 0 : slide + 1);
     }
-    return (
+    if (album.length > 1) return (
         <div className="carrousel">
             {album.map((photo, index) => {
                 return (
+
                     <img
                         src={photo}
                         alt={"photo" + `${index}`}
@@ -25,11 +26,23 @@ export const Carrousel = ({ location }) => {
                         className={slide === index ? "slide" : "slide slide-hidden"} />
                 )
             })}
-            <FontAwesomeIcon onClick={previousSlide} icon={faChevronLeft} className="arrow_left arrow" />
-            <FontAwesomeIcon onClick={nextSlide} icon={faChevronRight} className="arrow_right arrow" />
+            <span onClick={previousSlide} className="arrow_left arrow"> &#12296; </span>
+            <span onClick={nextSlide} className="arrow_right arrow"> &#12297; </span>
             <span className='indicator'> {slide + 1}/{album.length}</span>
         </div >
     );
+    else return (<div className="carrousel">
+        {album.map((photo, index) => {
+            return (
+
+                <img
+                    src={photo}
+                    alt={"photo" + `${index}`}
+                    key={"photokey" + `${index}`}
+                    className={slide === index ? "slide" : "slide slide-hidden"} />
+            )
+        })}
+    </div>)
 };
 
 export default Carrousel

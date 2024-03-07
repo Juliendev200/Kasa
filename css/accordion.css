@@ -20,7 +20,7 @@
   top: 30%;
   right: 20px;
   color: #FFFFFF;
-  transform: rotate(180deg);
+  transform: rotate(-90deg);
   transition: all 0.2s;
 }
 .accordion .label__arrow:hover {
@@ -44,6 +44,7 @@
   margin: 0;
 }
 .active .label__arrow {
-  transform: rotate(0deg);
+  transform: rotate(90deg);
   transition: all 0.2s;
+  top: 0%;
 }

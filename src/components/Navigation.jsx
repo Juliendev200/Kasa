@@ -8,7 +8,7 @@ export default function Navigation() {
             <nav>
                 <ul>
                     <li>
-                        <NavLink to={`/Home`}
+                        <NavLink to={`/`}
                             className={(nav) => (nav.isActive ? "nav-active" : "")}> Accueil</NavLink>
                     </li>
                     <li>

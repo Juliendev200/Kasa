@@ -1,6 +1,6 @@
 import { Outlet, useLocation, redirect } from "react-router-dom";
-import Navigation from "../components/Navigation"
-import Footer from "../components/Footer"
+import Navigation from "../Navigation"
+import Footer from "../Footer"
 
 export default function RootLayout() {
   return (

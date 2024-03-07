@@ -1,6 +1,6 @@
 .error-page {
   display: flex;
-  padding: 139px 0px;
+  padding: 139px 57px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,7 @@
   color: #FF6060;
 }
 .error-page h3 {
+  text-align: center;
   font-size: 2em;
   font-weight: 300;
   color: #FF6060;
@@ -23,4 +24,21 @@
   font-size: 1.1em;
   text-decoration: underline;
   color: #000000;
+}
+
+@media (max-width: 768px) {
+  .error-page {
+    padding: 113px 57px 113px 57px;
+    gap: 113px;
+  }
+  .error-page h1 {
+    font-size: 96px;
+  }
+  .error-page h3 {
+    font-size: 18px;
+    min-width: 260px;
+  }
+  .error-page .comebackhome {
+    font-size: 14px;
+  }
 }

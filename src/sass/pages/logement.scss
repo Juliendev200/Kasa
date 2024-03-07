@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    width: 100%;
 
 
 
@@ -11,14 +12,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 1240px;
         position: relative;
 
         .arrow {
             color: white;
             position: absolute;
-            width: 3em;
-            height: 5em;
+            font-size: 47px;
+            font-weight: bold;
             filter: drop-shadow(0px 0px 5px #555);
         }
 
@@ -27,17 +27,15 @@
         }
 
         .arrow_right {
-            bottom: 175px;
-            right: 24px;
+            right: 12px;
         }
 
         .arrow_left {
-            bottom: 175px;
-            left: 24px;
+            left: 12px;
         }
 
         .slide {
-            max-height: 415px;
+            height: 415px;
             object-fit: cover;
             object-position: center;
             width: 100%;
@@ -79,11 +77,11 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            gap: 0.6em;
+            gap: 19px;
             margin: 0;
+            font-size: 25px;
 
             .activestar {
-
                 color: colors.$primary;
             }
 
@@ -97,6 +95,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+
             gap: 10px;
             padding-bottom: 1.3em;
 
@@ -140,10 +139,10 @@
         .tag {
             display: flex;
             margin: 0;
-            padding: 0;
+            min-width: 115px;
+            padding: 0px 6px 0px 6px;
             justify-content: center;
             align-items: center;
-            width: 115px;
             height: 25px;
             background-color: colors.$primary;
             color: colors.$white;
@@ -158,12 +157,22 @@
     .logement {
         .descriptionwrapper {
             flex-direction: column;
+            width: 100%;
+
+            .tags {
+                .tag {
+                    font-size: 10px;
+                    min-width: 84px;
+                    height: 18px;
+                }
+            }
 
             .description2 {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
+
 
                 div {
                     flex: 1;
@@ -172,6 +181,9 @@
                 >.hosting {
                     position: relative;
                     left: 50%;
+                    padding-top: 17px;
+                    padding-bottom: 0;
+
 
                 }
 
@@ -179,17 +191,76 @@
                     justify-content: flex-start;
                     position: relative;
                     right: 50%;
+                    padding-top: 24px;
+
                 }
             }
+
+
         }
 
         .logement-accordion {
             flex-direction: column;
             gap: 1.3rem;
+            padding: 13px 0px 27px 0px;
 
             .accordion {
                 width: 100%;
             }
         }
+    }
+}
+
+@media (max-width:768px) {
+    .logement {
+        .carrousel {
+            .slide {
+                height: 255px;
+            }
+
+            .indicator {
+                display: none;
+            }
+
+            .arrow {
+                font-size: 24px;
+            }
+        }
+
+        .descriptionwrapper {
+            .description1 {
+                h1 {
+                    font-size: 18px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .description2 {
+                h3 {
+                    font-size: 12px;
+                    width: 65px;
+                }
+
+                .hosting_picture {
+                    border-radius: 32px;
+                    max-width: 32px;
+                    max-height: 32px;
+                }
+
+                .rating {
+                    gap: 8px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .accordion {
+            font-size: 13px;
+        }
+
+
     }
 }
