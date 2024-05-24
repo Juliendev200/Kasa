@@ -1,6 +1,6 @@
 import React from 'react';
 import AproposDatas from '../datas/AproposDatas.json'
-import Accordion from "./componentelement/Accordion"
+import Accordion from "./Accordion"
 
 
 

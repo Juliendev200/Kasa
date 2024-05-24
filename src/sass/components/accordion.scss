@@ -1,65 +1,60 @@
 @use "../utils/colors.scss";
 
-
 .accordion {
+  position: relative;
+
+  .label {
     position: relative;
-    max-width: 1023px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: colors.$primary;
+    color: colors.$white;
+    font-size: 1.5em;
+    border-radius: 5px;
+    height: 52px;
+    padding-left: 15px;
+    font-weight: bold;
+  }
 
-    .label {
-        position: relative;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        background: colors.$primary;
-        color: colors.$white;
-        font-size: 1.5em;
-        border-radius: 5px;
-        height: 52px;
-        padding-left: 15px;
-        font-weight: bold;
+  .label__arrow {
+    position: absolute;
+    top: 30%;
+    right: 20px;
 
+    color: colors.$white;
+    transform: rotate(-90deg);
+    transition: all 0.2s;
+  }
 
-    }
+  .label__arrow:hover {
+    cursor: pointer;
+  }
 
-    .label__arrow {
-        position: absolute;
-        top: 30%;
-        right: 20px;
-
-        color: colors.$white;
-        transform: rotate(-90deg);
-        transition: all .2s;
-    }
-
-    .label__arrow:hover {
-        cursor: pointer;
-    }
-
-    .content {
-        position: relative;
-        background-color: colors.$white2;
-        font-size: 1.1em;
-        height: 0;
-        overflow: hidden;
-    }
+  .content {
+    position: relative;
+    background-color: colors.$white2;
+    font-size: 1.1em;
+    height: 0;
+    overflow: hidden;
+  }
 }
 
 .active {
-    .content {
-        height: auto;
-        padding: 25px 20px;
-        overflow-y: auto;
+  .content {
+    height: auto;
+    padding: 25px 20px;
+    overflow-y: auto;
 
-
-        p {
-            padding: 5px;
-            margin: 0;
-        }
+    p {
+      padding: 5px;
+      margin: 0;
     }
+  }
 
-    .label__arrow {
-        transform: rotate(90deg);
-        transition: all .2s;
-        top: 0%;
-    }
+  .label__arrow {
+    transform: rotate(90deg);
+    transition: all 0.2s;
+    top: 0%;
+  }
 }
